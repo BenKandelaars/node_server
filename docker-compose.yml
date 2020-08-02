@@ -3,8 +3,9 @@ version: '3'
 services:
     api_server:
         container_name: api_server
-        build: .
+        image: api_server 
         volumes:
             - .:/app/
         ports:
-            - "8080:80"
+            - "8080:3020"
+        command: [ "npm", "run",  "dev", "--", "src/${ENTRY}" ]
