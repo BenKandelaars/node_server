@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "rm:node_modules": "rm -rf node_modules/",
     "dev": "nodemon -L",
-    "start": "node ./src/main.js"
+    "build": "./server.sh build",
+    "up": "./server.sh up",
+    "down": "./server.sh down"
   },
   "author": "",
   "license": "ISC",
