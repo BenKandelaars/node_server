@@ -15,11 +15,11 @@ The nodenom_watcher container expects script_path to be passed to it in the dock
 
 Start container running script
 ``` 
-docker run --publish [host port]:[container port] -v $PWD:/app/ nodemon -L [script path]
+docker run --publish [host port]:[container port] --volume $PWD:/app/ nodemon -L [script path]
 ```
 
 #### Output connections
-At least on script requires it to be able to make an output socket connection with another script. In this case add the --network="host" flag to the docker run command as in the example below.
+At least one script requires it to be able to make an output socket connection with another running script. In this case add the --network="host" flag to the docker run command as in the example below.
 
 ```
 docker run --network="host" -v $PWD:/app/ nodemon -L src/sockets net-watcher-json-client.js
