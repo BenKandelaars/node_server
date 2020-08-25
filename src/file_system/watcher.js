@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.watchFile('./src/misc/readme.txt', function() {
+fs.watchFile('src/target.txt', function() {
     console.log('Readme.txt just changed!');
 });
 

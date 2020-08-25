@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('target.txt', (err, data) => {
+fs.readFile('src/target.txt', (err, data) => {
     console.log('err: ', typeof err);
     if (err) {
         throw err;
