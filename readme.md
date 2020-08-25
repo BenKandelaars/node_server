@@ -7,7 +7,7 @@ To facilitate learning the scripts are watched by a nodemon process run in the c
 #### Build
 The nodemon container, named nodemon_watcher is built using
 ```
-npm build
+npm run build
 ```
 
 #### Run
@@ -15,12 +15,12 @@ The nodenom_watcher container expects script_path to be passed to it in the dock
 
 Start container running script
 ``` 
-docker run --publish [host port]:[container port] --volume $PWD:/app/ nodemon -L [script path]
+docker run --publish [host port]:[container port] --volume $PWD/src:/app/src nodemon -L [script path]
 ```
 
 #### Output connections
 At least one script requires it to be able to make an output socket connection with another running script. In this case add the --network="host" flag to the docker run command as in the example below.
 
 ```
-docker run --network="host" -v $PWD:/app/ nodemon -L src/sockets net-watcher-json-client.js
+docker run --network="host" --volume $PWD/src:/app/src nodemon -L [script-path]
 ```
