@@ -24,3 +24,13 @@ At least one script requires it to be able to make an output socket connection w
 ```
 docker run --network="host" --volume $PWD/src:/app/src nodemon -L [script-path]
 ```
+
+#### Development
+
+Install npm packages using the _package-lock-only_ flag to prevent installation into the node_modules folder. 
+
+```
+npm install [package] --package-lock-only
+
+npm run build
+```
