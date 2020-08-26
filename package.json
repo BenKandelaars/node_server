@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanup": "rm -rf node_modules/",
-    "build": "docker build -t nodemon ."
+    "build": "docker build -f dockerfiles/node.Dockerfile -t nodemon ."
   },
   "author": "",
   "license": "ISC",
