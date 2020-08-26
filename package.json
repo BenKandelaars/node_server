@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanup": "rm -rf node_modules/",
+    "build:go": "docker build -f dockerfiles/go.Dockerfile -t golang .",
     "build": "docker build -f dockerfiles/node.Dockerfile -t nodemon ."
   },
   "author": "",

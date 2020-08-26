@@ -34,3 +34,15 @@ npm install [package] --package-lock-only
 
 npm run build
 ```
+
+#### Go Builds
+
+Build go container with runtime
+```
+npm run build:go
+```
+
+To run the go script 
+```
+docker run --volume $PWD/src:/go/src/app/src golang go run [script-path]
+```
